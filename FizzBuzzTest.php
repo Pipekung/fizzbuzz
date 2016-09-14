@@ -2,7 +2,7 @@
 
 class FizzBuzz
 {
-	private $NUMBER_TO_TEXT = [1 => '1', 2 => '2', 3 => 'Fizz', 4 => '4', 5 => 'Buzz', 6 => 'Fizz'];
+	private $NUMBER_TO_TEXT = [1 => '1', 2 => '2', 3 => 'Fizz', 4 => '4', 5 => 'Buzz', 6 => 'Fizz', 7 => '7'];
 
     public function count($int)
     {
@@ -46,5 +46,11 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase
     {
         $fizzbuzz = new FizzBuzz();
         $this->assertEquals('Fizz', $fizzbuzz->count(6));
+    }
+
+    public function testFizzBuzzShouldBeSeven()
+    {
+        $fizzbuzz = new FizzBuzz();
+        $this->assertEquals('7', $fizzbuzz->count(7));
     }
 }
