@@ -3,7 +3,7 @@
 class FizzBuzz
 {
 	private $NUMBER;
-	private $NUMBER_TO_TEXT = [1 => '1', 2 => '2', 3 => 'Fizz', 4 => '4'];
+	private $NUMBER_TO_TEXT = [1 => '1', 2 => '2', 3 => 'Fizz', 4 => '4', 5 => 'Buzz'];
 
     public function __construct($number)
     {
@@ -40,5 +40,11 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase
     {
         $fizzbuzz = new FizzBuzz(4);
         $this->assertEquals('4', $fizzbuzz->toString());
+    }
+
+    public function testFizzBuzzShouldBeFive()
+    {
+        $fizzbuzz = new FizzBuzz(5);
+        $this->assertEquals('Buzz', $fizzbuzz->toString());
     }
 }
