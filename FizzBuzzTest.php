@@ -4,16 +4,28 @@ class FizzBuzz
 {
     public function count($int)
     {
-        if ($int == 15) {
+        if ($this->isNumberEqualFifteen($int)) {
             return 'FizzBuzz';
-        } elseif ($int % 3 == 0) {
+        } elseif ($this->isNumberModuloByThree($int)) {
             return 'Fizz';
-        } elseif ($int % 5 == 0) {
+        } elseif ($this->isNumberModuloByFive($int)) {
             return 'Buzz';
         } else {
             return $int;
         }
     }
+
+	public function isNumberEqualFifteen($int) {
+		return $int == 15;
+	}
+
+	public function isNumberModuloByThree($int) {
+		return $int % 3 == 0;
+	}
+
+	public function isNumberModuloByFive($int) {
+		return $int % 5 == 0;
+	}
 }
 
 class FizzBuzzTest extends PHPUnit_Framework_TestCase
